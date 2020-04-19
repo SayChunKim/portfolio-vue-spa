@@ -1,7 +1,13 @@
 # RESUME VUE.JS THEME
-Free and beautiful Vue.js template
+Free themed Vue.js template
 
-![sreenshot](https://github.com/OrionWambert/Resume-Vue.Js-Theme/blob/master/src/assets/images/screenshot.png)
+- Bootstrap-Vue (without JQuery)
+- SPA Pre-rendered (Pretty URL-able in Github Pages)
+- Contact Us using [Formspree.io](https://formspree.io/) Axios Ajax
+- vue-router Transition
+- Project Built with Vue-Cli
+
+![screenshot](https://raw.githubusercontent.com/SayChunKim/portfolio-vue-spa/master/public/img/timeline/cover_spa.JPG)
 
 ## Project setup
 ```
@@ -10,17 +16,12 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+yarn serve
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+yarn build
 ```
 
 ### Customize configuration
