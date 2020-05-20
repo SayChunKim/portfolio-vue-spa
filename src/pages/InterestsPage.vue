@@ -1,6 +1,7 @@
 <template>
+<div class="container-fluid p-0 justify-content-center d-flex">
   <section class="resume-section p-3 p-lg-5
-   d-flex align-items-center" id="interests">
+   d-flex align-items-center text-center" id="interests">
     <div class="w-100">
       <h2 class="mb-5">Interests</h2>
       <p>Apart from being a mobile &amp; web developer,
@@ -18,6 +19,7 @@
       <p>Music? Hardbass for life</p>
     </div>
   </section>
+  </div>
 </template>
 
 <script>
@@ -27,4 +29,7 @@ export default {
 </script>
 
 <style>
+#interests{
+max-width: 900px;
+}
 </style>

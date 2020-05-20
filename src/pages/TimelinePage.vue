@@ -220,7 +220,7 @@ export default {
 }
 @media (min-width: 1300px) {
   #timeline .demo-card-wrapper::after {
-    border-left: 1px solid #cbb67e;
+    border-left: 1px solid #968351;
   }
 }
 #timeline .demo-card {
@@ -289,7 +289,7 @@ export default {
   font-size: 35px;
   line-height: 35px;
   font-weight: 600;
-  background: rgba(0, 0, 0, 0.17);
+  background:rgba(255, 255, 255, 0.22);
 }
 #timeline .demo-card .head h2 {
   text-transform: uppercase;
@@ -335,18 +335,18 @@ export default {
   border-radius: 8px;
 }
 #timeline .demo-card--step1,  #timeline .demo-card--step3,#timeline .demo-card--step5 {
-  background-color: #515796;
+  background-color: #0d1679;
 }
 #timeline .demo-card--step1 .head::after, #timeline .demo-card--step3 .head::after,
 #timeline .demo-card--step5 .head::after {
-  border-color: #515796;
+  border-color: #0d1679;
 }
 #timeline .demo-card--step2, #timeline .demo-card--step4 {
-  background-color: #cbb67e;
+  background-color: #968351;
 }
 #timeline .demo-card--step2 .head::after, #timeline .demo-card--step4 .head::after,
  #timeline  {
-  border-color: #cbb67e;
+  border-color: #968351;
 }
 /* #timeline .demo-card--step3 {
   background-color: #ce43eb;

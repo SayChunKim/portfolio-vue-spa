@@ -1,11 +1,12 @@
 <template>
+  <div class="container-fluid p-0 justify-content-center d-flex">
   <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="contact">
     <div class="w-100">
-      <h2 class="mb-5">Contact</h2>
+      <h2 class="mb-5 text-center">Contact</h2>
       <form role="form" method="POST" @submit.prevent="sendEmail">
         <b-row>
           <div class="form-group col-sm-6">
-            <label>Your Name:</label>
+            <label>Your Name</label>
             <input
               type="text"
               name="name"
@@ -15,7 +16,7 @@
             />
           </div>
           <div class="form-group col-sm-6">
-            <label>Your Email:</label>
+            <label>Your Email</label>
             <input
               type="email"
               name="_replyto"
@@ -28,7 +29,7 @@
         </b-row>
         <b-row>
           <div class="form-group col-sm-12">
-            <label>Message:</label>
+            <label>Message</label>
             <textarea
               name="message"
               class="form-control col-12"
@@ -55,6 +56,7 @@
       </form>
     </div>
   </section>
+  </div>
 </template>
 <style scoped>
 label {

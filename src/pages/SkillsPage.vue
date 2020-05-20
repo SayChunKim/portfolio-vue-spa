@@ -1,5 +1,6 @@
 <template>
-  <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
+<div class="container-fluid p-0 justify-content-center d-flex">
+  <section class="resume-section p-3 p-lg-5 d-flex align-items-center text-center" id="skills">
     <div class="w-100">
       <h2 class="mb-5">Skills</h2>
 
@@ -89,6 +90,7 @@
       </ul>
     </div>
   </section>
+  </div>
 </template>
 <style scoped>
 .icon {

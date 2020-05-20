@@ -7,6 +7,7 @@ import InterestsPage from '@/pages/InterestsPage.vue';
 import AwardPage from '@/pages/AwardPage.vue';
 import TimelinePage from '@/pages/TimelinePage.vue';
 import SuccessPage from '@/pages/SuccessPage.vue';
+// import PwnedPage from '@/pages/PwnedPage.vue';
 
 Vue.use(VueRouter);
 
@@ -26,6 +27,10 @@ const routes = [
           property: 'og:description',
           content: 'Welcome to SC Kim Portfolio',
         },
+        {
+          name: 'keywords',
+          content: 'SC Kim, Portfolio, VueJS, Mobile, Web Developer,',
+        },
       ],
     },
   },
@@ -43,6 +48,10 @@ const routes = [
         {
           property: 'og:description',
           content: 'Experience Timeline | SC Kim',
+        },
+        {
+          name: 'keywords',
+          content: 'SC Kim, Portfolio, VueJs, Timeline, Mobile, Web Developer, Timeline',
         },
       ],
     },
@@ -62,6 +71,10 @@ const routes = [
           property: 'og:description',
           content: 'Technical Skills | SC Kim',
         },
+        {
+          name: 'keywords',
+          content: 'SC Kim, Portfolio, VueJs, Timeline, Mobile, Web Developer, Skills, Android, iOS, Javascript, PHP',
+        },
       ],
     },
   },
@@ -79,6 +92,10 @@ const routes = [
         {
           property: 'og:description',
           content: 'Interest | SC Kim',
+        },
+        {
+          name: 'keywords',
+          content: 'SC Kim, Portfolio, VueJs, Interest, Mobile, Web Developer',
         },
       ],
     },
@@ -107,6 +124,10 @@ const routes = [
         {
           property: 'og:description',
           content: "I won't bite, give me a ping!",
+        },
+        {
+          name: 'keywords',
+          content: 'SC Kim, Portfolio, VueJs, Contact Me, Mobile, Web Developer',
         },
       ],
     },

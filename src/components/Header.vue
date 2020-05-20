@@ -8,10 +8,10 @@
       <span class="d-none d-lg-block">
         <!-- USE IT <img class="img-fluid img-profile rounded-circle mx-auto mb-2"
         src="https://niochi.com/img/logo_niochi_color.png" alt />-->
-        <a href="/">
+        <!-- <a href="/"> -->
           <img id="logo-bg" class="img-fluid mx-auto mb-2"
-           src="../assets/images/sc_logov2.png" width="140" alt />
-        </a>
+           src="../assets/images/sc_logov2.png" width="140" alt="Logo" />
+        <!-- </a> -->
       </span>
     </div>
     <!-- <button
@@ -21,7 +21,39 @@
     >
     <span class="navbar-toggler-icon"></span>
     </button> -->
-    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+    <!-- <b-navbar-toggle target="nav-collapse"></b-navbar-toggle> -->
+      <div>
+    <b-button v-b-toggle.sidebar-backdrop class="d-md-none" id="menuBtn"><i class="fa fa-bars"></i></b-button>
+    <b-sidebar
+      id="sidebar-backdrop"
+      title="Menu"
+      backdrop
+      shadow=""
+    >
+      <div class="px-0 py-2">
+        <ul class="list-unstyled">
+        <li class="nav-item">
+          <router-link to="/" class="nav-link js-scroll-trigger">About</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/timeline" class="nav-link js-scroll-trigger">Experience</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/skills" class="nav-link js-scroll-trigger">Skills</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/interests" class="nav-link js-scroll-trigger">Interests</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/awards" class="nav-link js-scroll-trigger">Awards</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/contact" class="nav-link js-scroll-trigger">Contact</router-link>
+        </li>
+        </ul>
+        </div>
+    </b-sidebar>
+  </div>
     <!-- <div class=" navbar-collapse" id="navbarSupportedContent"> -->
       <b-collapse id="nav-collapse" is-nav>
       <!-- <ul id="mainMenu" class="navbar-nav" v-bind:class="{'menu-active': show,'menu': !show}"> -->
@@ -107,5 +139,17 @@ height: 0;
     visibility: visible;
     opacity: 1;
 }
+.b-sidebar-body a.nav-link.js-scroll-trigger.router-link-exact-active.router-link-active{
+    color: #fff !important;
+    background: #0d1679;
+    margin-right: 1rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+}
+#menuBtn{
+  background: #0d1679;
+    border: none;
+    font-size: 1.5rem;
 }
 </style>
