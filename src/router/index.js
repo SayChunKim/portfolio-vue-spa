@@ -7,7 +7,7 @@ import InterestsPage from '@/pages/InterestsPage.vue';
 import AwardPage from '@/pages/AwardPage.vue';
 import TimelinePage from '@/pages/TimelinePage.vue';
 import SuccessPage from '@/pages/SuccessPage.vue';
-// import PwnedPage from '@/pages/PwnedPage.vue';
+import SlidePage from '@/pages/SlidePage.vue';
 
 Vue.use(VueRouter);
 
@@ -128,6 +128,28 @@ const routes = [
         {
           name: 'keywords',
           content: 'SC Kim, Portfolio, VueJs, Contact Me, Mobile, Web Developer',
+        },
+      ],
+    },
+  },
+  {
+    path: '/keynotes',
+    name: 'Slides / Keynotes',
+    component: SlidePage,
+    meta: {
+      title: 'Slides & Keynotes / SC Kim',
+      metaTags: [
+        {
+          name: 'description',
+          content: 'Previous presented keynotes by SC Kim',
+        },
+        {
+          property: 'og:description',
+          content: 'Previous presented keynotes by SC Kim',
+        },
+        {
+          name: 'keywords',
+          content: 'SC Kim, Portfolio, VueJs, Keynotes, Slides, Mobile, Web Developer, Slides',
         },
       ],
     },

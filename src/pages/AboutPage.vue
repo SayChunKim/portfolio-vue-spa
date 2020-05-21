@@ -6,7 +6,7 @@
         <b-col cols="12" class="mb-4">
           <img
             id="logo-xs"
-            src="../assets/images/sc_logov2_colored.png"
+            src="../assets/images/sc_logov2_colored_120x120.png"
             alt
             class="d-block d-sm-none"
           />

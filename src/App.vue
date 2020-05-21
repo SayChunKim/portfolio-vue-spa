@@ -20,6 +20,20 @@ export default {
   components: {
     HeaderComponent,
   },
+  created() {
+    if (this.$workbox) {
+      this.$workbox.addEventListener('waiting', () => {
+        this.showUpgradeUI = true;
+      });
+    }
+  },
+
+  methods: {
+    async accept() {
+      this.showUpgradeUI = false;
+      await this.$workbox.messageSW({ type: 'SKIP_WAITING' });
+    },
+  },
 };
 </script>
 <style scoped>
@@ -34,3 +48,6 @@ export default {
 .fade-leave-active {
   opacity: 0
 }</style>
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins&display=swap');
+</style>

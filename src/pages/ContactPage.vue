@@ -60,7 +60,8 @@
 </template>
 <style scoped>
 label {
-  color: #cbb67e;
+  color: #968351;
+    font-weight: bold;
 }
 input[type="submit"]{
     background-color:#515796;

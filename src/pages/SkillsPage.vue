@@ -3,7 +3,6 @@
   <section class="resume-section p-3 p-lg-5 d-flex align-items-center text-center" id="skills">
     <div class="w-100">
       <h2 class="mb-5">Skills</h2>
-
       <div class="subheading mb-3">Front-End</div>
       <ul class="list-inline dev-icons">
         <li class="list-inline-item">
@@ -19,6 +18,12 @@
           <i class="fab fa-vuejs"></i>
         </li>
         <li class="list-inline-item">
+          <i class="fab fa-angular"></i>
+        </li>
+        <li class="list-inline-item">
+          <i class="fab fa-react"></i>
+        </li>
+        <li class="list-inline-item">
           <i class="fab fa-sass"></i>
         </li>
         <li class="list-inline-item">
@@ -28,7 +33,12 @@
           <i class="fab fa-grunt"></i>
         </li>
       </ul>
-      <div class="subheading mb-3">Back-End</div>
+      <blockquote class="blockquote">
+      <code>
+        HTML5, CSS3, JS, VueJS, Angular, React, SASS, LESS, Grunt
+      </code>
+      </blockquote>
+      <div class="subheading mb-3 mt-4">Back-End</div>
       <ul class="list-inline dev-icons">
         <li class="list-inline-item">
           <i class="fab fa-npm"></i>
@@ -51,7 +61,12 @@
           />
         </li>
       </ul>
-      <div class="subheading mb-3">Frameworks</div>
+       <blockquote class="blockquote">
+      <code>
+        NPM/NodeJS, Laravel, PHP (LAMP), Firebase
+      </code>
+      </blockquote>
+      <div class="subheading mb-3 mt-4">Frameworks</div>
       <ul class="list-inline dev-icons">
         <li class="list-inline-item">
           <i class="fab fa-wordpress"></i>
@@ -69,7 +84,12 @@
           <i class="fab fa-apple"></i>
         </li>
       </ul>
-      <div class="subheading mb-3">Workflow</div>
+      <blockquote class="blockquote">
+      <code>
+        Wordpress, Opencart, GravCMS, Android, iOS (Native or Cross Platforms)
+      </code>
+      </blockquote>
+      <div class="subheading mb-3 mt-4">Workflow</div>
       <ul class="fa-ul mb-0">
         <li>
           <i class="fa-li fa fa-check"></i>
@@ -87,6 +107,10 @@
           <i class="fa-li fa fa-check"></i>
           Agile Development &amp; Scrum
         </li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Performance Matters
+        </li>
       </ul>
     </div>
   </section>
@@ -100,7 +124,14 @@
 .icon:hover {
   filter: grayscale(0);
 }
-
+code{
+  color:#b20a57;
+}
+.blockquote{
+  background: #eee;
+    border-radius: 12px;
+    padding: 1rem .5rem;
+}
 .dev-icons .list-inline-item i:hover {
     transition:color 200ms linear;
 }

@@ -1,6 +1,7 @@
 /* eslint-disable no-param-reassign */
 const path = require('path');
 const PrerenderSPAPlugin = require('prerender-spa-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = {
   // ...other vue-cli plugin options...
@@ -19,6 +20,7 @@ module.exports = {
     workboxOptions: {
       // swSrc is required in InjectManifest mode.
       swSrc: 'src/registerServiceWorker.js',
+      swDest: 'sw.js',
       // ...other Workbox options...
     },
   },
@@ -50,6 +52,12 @@ module.exports = {
   // },
   configureWebpack: {
     plugins: [
+      new ImageminPlugin({
+        disable: process.env.NODE_ENV !== 'production', // Disable during development
+        jpegtran: {
+          quality: '95-100',
+        },
+      }),
       new PrerenderSPAPlugin({
         staticDir: path.join(__dirname, 'dist'),
 
@@ -59,6 +67,7 @@ module.exports = {
           '/interests',
           '/skills',
           '/awards',
+          '/keynotes',
           '/contact',
           '/success'],
 

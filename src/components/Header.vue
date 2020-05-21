@@ -10,7 +10,7 @@
         src="https://niochi.com/img/logo_niochi_color.png" alt />-->
         <!-- <a href="/"> -->
           <img id="logo-bg" class="img-fluid mx-auto mb-2"
-           src="../assets/images/sc_logov2.png" width="140" alt="Logo" />
+           src="../assets/images/sc_logov2_140x140.png" width="140" height="140" alt="Logo" />
         <!-- </a> -->
       </span>
     </div>
@@ -23,7 +23,7 @@
     </button> -->
     <!-- <b-navbar-toggle target="nav-collapse"></b-navbar-toggle> -->
       <div>
-    <b-button v-b-toggle.sidebar-backdrop class="d-md-none" id="menuBtn"><i class="fa fa-bars"></i></b-button>
+    <b-button v-b-toggle.sidebar-backdrop class="d-lg-none" id="menuBtn" aria-label="menu-button-mobile"><i class="fa fa-bars"></i></b-button>
     <b-sidebar
       id="sidebar-backdrop"
       title="Menu"
@@ -46,6 +46,9 @@
         </li>
         <li class="nav-item">
           <router-link to="/awards" class="nav-link js-scroll-trigger">Awards</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/keynotes" class="nav-link js-scroll-trigger">Keynotes</router-link>
         </li>
         <li class="nav-item">
           <router-link to="/contact" class="nav-link js-scroll-trigger">Contact</router-link>
@@ -72,6 +75,9 @@
         </li>
         <li class="nav-item">
           <router-link to="/awards" class="nav-link js-scroll-trigger">Awards</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/keynotes" class="nav-link js-scroll-trigger">Keynotes</router-link>
         </li>
         <li class="nav-item">
           <router-link to="/contact" class="nav-link js-scroll-trigger">Contact</router-link>
