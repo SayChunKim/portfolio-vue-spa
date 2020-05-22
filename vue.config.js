@@ -16,11 +16,10 @@ module.exports = {
       purpose: 'maskable any',
     },
     // configure the workbox plugin
-    workboxPluginMode: 'InjectManifest',
+    workboxPluginMode: 'GenerateSW',
     workboxOptions: {
       // swSrc is required in InjectManifest mode.
-      swSrc: 'src/registerServiceWorker.js',
-      swDest: 'sw.js',
+      // swSrc: 'src/registerServiceWorker.js',
       // ...other Workbox options...
     },
   },
@@ -55,7 +54,7 @@ module.exports = {
       new ImageminPlugin({
         disable: process.env.NODE_ENV !== 'production', // Disable during development
         jpegtran: {
-          quality: '95-100',
+          quality: '85-90',
         },
       }),
       new PrerenderSPAPlugin({
