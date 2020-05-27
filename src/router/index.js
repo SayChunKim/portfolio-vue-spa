@@ -8,6 +8,7 @@ import AwardPage from '@/pages/AwardPage.vue';
 import TimelinePage from '@/pages/TimelinePage.vue';
 import SuccessPage from '@/pages/SuccessPage.vue';
 import SlidePage from '@/pages/SlidePage.vue';
+import MoviesPage from '@/pages/MoviesPage.vue';
 
 Vue.use(VueRouter);
 
@@ -154,6 +155,28 @@ const routes = [
       ],
     },
   },
+  {
+    path: '/sc-movies',
+    name: 'SC Movies',
+    component: MoviesPage,
+    meta: {
+      title: 'Movies / SC Kim',
+      metaTags: [
+        {
+          name: 'description',
+          content: 'Tech Movies List by SC Kim with TMDB API',
+        },
+        {
+          property: 'og:description',
+          content: 'Tech Movies List by SC Kim with TMDB API',
+        },
+        {
+          name: 'keywords',
+          content: 'SC Kim, Portfolio, VueJs, TMDB, Keynotes, Slides, Mobile, Web Developer, Movies',
+        },
+      ],
+    },
+  },
 ];
 
 const router = new VueRouter({
@@ -170,9 +193,9 @@ router.beforeEach((to, from, next) => {
 
   // Find the nearest route element with meta tags.
   const nearestWithMeta = to.matched.slice().reverse().find((r) => r.meta && r.meta.metaTags);
+  // eslint-disable-next-line no-unused-vars
   const previousNearestWithMeta = from.matched.slice().reverse().find((r) => r.meta && r.meta.metaTags);
-  // eslint-disable-next-line no-console
-  console.log(previousNearestWithMeta);
+
 
   // If a route with a title was found, set the document (page) title to that value.
   if (nearestWithTitle) document.title = nearestWithTitle.meta.title;

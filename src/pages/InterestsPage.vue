@@ -13,8 +13,9 @@
         </p>
       <p>
       When indoors (like very much), I follow a number of sci-fi and
-      fantasy genre movies and decent anime shows,
-      <strike> I am the one who cooks</strike> I like to learn cooking, while I spend a large amount
+      fantasy genre movies (wanna see my movie list <router-link to="/sc-movies">here?</router-link>)
+       and decent anime shows,<strike> I am the one who cooks</strike> I like to learn cooking,
+       while I spend a large amount
       of my free time exploring the latest technology
       advancements in the front-end web development world.</p>
 

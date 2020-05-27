@@ -72,6 +72,9 @@
         </li>
         <li class="nav-item">
           <router-link to="/interests" class="nav-link js-scroll-trigger">Interests</router-link>
+          <ul v-if="this.$route.path == '/sc-movies' || this.$route.path == '/sc-movies/' ">
+            <router-link to="/sc-movies" class="nav-link js-scroll-trigger">Movies</router-link>
+          </ul>
         </li>
         <li class="nav-item">
           <router-link to="/awards" class="nav-link js-scroll-trigger">Awards</router-link>

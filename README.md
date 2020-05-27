@@ -1,27 +1,21 @@
 # RESUME VUE.JS THEME
 Free and beautiful Vue.js template
 
-![sreenshot](https://raw.githubusercontent.com/SayChunKim/portfolio-vue-spa/master/public/img/timeline/cover_spa.JPG)
-
-Features
-- Responsive Reusable BootstrapVue Components
-- Service-worker ready with Workbox
-- Vue-router for routing
-- Axios for API GET/POST HTTP Client requests
+![sreenshot](https://github.com/OrionWambert/Resume-Vue.Js-Theme/blob/master/src/assets/images/screenshot.png)
 
 ## Project setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development using vue-cli-service
+### Compiles and hot-reloads for development
 ```
-yarn serve 
+npm run serve
 ```
 
 ### Compiles and minifies for production
 ```
-yarn build
+npm run build
 ```
 
 ### Lints and fixes files

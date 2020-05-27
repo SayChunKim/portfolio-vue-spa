@@ -64,8 +64,8 @@ label {
     font-weight: bold;
 }
 input[type="submit"]{
-    background-color:#515796;
-    border-color:#515796;
+    background-color:#0d1679;
+    border-color:#0d1679;
 }
 </style>
 <script>

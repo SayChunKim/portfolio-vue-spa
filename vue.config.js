@@ -2,6 +2,7 @@
 const path = require('path');
 const PrerenderSPAPlugin = require('prerender-spa-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const { GenerateSW } = require('workbox-webpack-plugin');
 
 module.exports = {
   // ...other vue-cli plugin options...
@@ -23,7 +24,6 @@ module.exports = {
       // ...other Workbox options...
     },
   },
-
   // pluginOptions: {
   //   prerenderSpa: {
   //     registry: undefined,
@@ -68,7 +68,8 @@ module.exports = {
           '/awards',
           '/keynotes',
           '/contact',
-          '/success'],
+          '/success',
+          '/sc-movies'],
 
         // IMPORTANT HERE
         postProcess(renderedRoute) {
@@ -79,6 +80,17 @@ module.exports = {
           }
           return renderedRoute;
         },
+      }),
+      new GenerateSW({
+        additionalManifestEntries: [
+          { url: '/timeline/', revision: null },
+          { url: '/interests/', revision: null },
+          { url: '/skills/', revision: null },
+          { url: '/awards/', revision: null },
+          { url: '/keynotes/', revision: null },
+          { url: '/contact/', revision: null },
+          { url: '/sc-movies/', revision: null },
+        ],
       }),
     ],
   },

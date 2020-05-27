@@ -28,6 +28,8 @@
         <b-modal id="pdfDialog" :title="modal_name" ref="PDFDialog">
           <embed :src="modal_url" type="application/pdf" width="100%" height="600px">
         </b-modal>
+        <legend>Disclaimer: Please be noted some of methods/APIs might be outdated.
+          Please refer latest documentations.</legend>
       </div>
     </section>
   </div>
@@ -41,7 +43,7 @@ export default {
       slides: [
         {
           name: 'DevFest Kota Kinabalu - Polymer into Mobile App',
-          url: 'pdfs/Devfest_KK _Polymer _ Packaging_Web_App_into_Mobile_Apps.pdf',
+          url: 'pdfs/Devfest_KK _Polymer_Packaging_Web_App_into_Mobile_Apps.pdf',
           year: 2015,
         },
         {
@@ -77,5 +79,8 @@ export default {
         width: 100%;
         min-width: 900px;
     }
+}
+legend{
+  font-size: .8rem;
 }
 </style>

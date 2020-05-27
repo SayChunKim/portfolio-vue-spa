@@ -52,6 +52,13 @@
             >
               <i class="fab fa-medium"></i>
             </a>
+            <a
+              href="https://codepen.io/SCKim/collections"
+              rel="noopener noreferrer"
+              target="_blank" aria-label="codepen"
+            >
+              <i class="fab fa-codepen"></i>
+            </a>
           </div>
         </b-col>
 
