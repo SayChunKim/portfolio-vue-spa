@@ -25,12 +25,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 4rem;
-    line-height: 5.5rem
+    font-size: 3.0rem;
+    line-height: 3rem
 }
 
 h2 {
-    font-size: 3.5rem
+    font-size: 2.5rem
 }
 
 h3 {
@@ -51,15 +51,15 @@ p.lead {
 
 .social-icons a {
     display: inline-block;
-    height: 3.0rem;
-    width: 3.0rem;
+    height: 2.5rem;
+    width: 2.5rem;
     transition: background-color 200ms linear;
     background-color: #0d1679;
     color: #fff!important;
     border-radius: 100%;
     text-align: center;
     font-size: 1rem;
-    line-height: 3.0rem;
+    line-height: 2.5rem;
     margin-right: 1rem;
 }
 

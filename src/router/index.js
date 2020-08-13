@@ -8,103 +8,82 @@ import AwardPage from '@/pages/AwardPage.vue';
 import TimelinePage from '@/pages/TimelinePage.vue';
 import SuccessPage from '@/pages/SuccessPage.vue';
 import SlidePage from '@/pages/SlidePage.vue';
-import MoviesPage from '@/pages/MoviesPage.vue';
+import Error404Component from '@/pages/Error404.vue';
+// import MoviesPage from '@/pages/MoviesPage.vue';
 
 Vue.use(VueRouter);
-
+// const locale = this.$route.params.lang || 'en';
 const routes = [
   {
+    path: '/:lang(en|ja|ZH-cn)',
+    name: 'Lang',
+    component: { render(c) { return c('router-view'); } },
+    children: [
+      {
+        path: '',
+        name: 'il8n | About',
+        component: AboutPage,
+      },
+      {
+        path: 'timeline',
+        name: 'il8n | Experience',
+        component: TimelinePage,
+      },
+      {
+        path: 'skills',
+        name: 'il8n | Skills',
+        component: SkillsPage,
+      },
+      {
+        path: 'interests',
+        name: 'il8n | Interests',
+        component: InterestsPage,
+      },
+      {
+        path: 'awards',
+        name: 'il8n | Awards',
+        component: AwardPage,
+      },
+      {
+        path: 'keynotes',
+        name: 'il8n | Keynotes',
+        component: SlidePage,
+      },
+      // {
+      //   path: 'contact',
+      //   name: 'il8n | Contact',
+      //   component: ContactPage,
+      // },
+    ],
+  },
+  {
     path: '/',
-    name: 'About',
-    component: AboutPage,
-    meta: {
-      title: 'Welcome / SC Kim',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Welcome to SC Kim Portfolio',
-        },
-        {
-          property: 'og:description',
-          content: 'Welcome to SC Kim Portfolio',
-        },
-        {
-          name: 'keywords',
-          content: 'SC Kim, Portfolio, VueJS, Mobile, Web Developer,',
-        },
-      ],
-    },
+    name: 'Home',
+    redirect: '/en/',
   },
   {
     path: '/timeline',
     name: 'Timeline',
-    component: TimelinePage,
-    meta: {
-      title: 'Timeline / SC Kim',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Experience Timeline | SC Kim',
-        },
-        {
-          property: 'og:description',
-          content: 'Experience Timeline | SC Kim',
-        },
-        {
-          name: 'keywords',
-          content: 'SC Kim, Portfolio, VueJs, Timeline, Mobile, Web Developer, Timeline',
-        },
-      ],
-    },
+    redirect: '/en/timeline/',
+    // component: TimelinePage,
   },
   {
     path: '/skills',
     name: 'Skills',
-    component: SkillsPage,
-    meta: {
-      title: 'Skills / SC Kim',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Skills | SC Kim',
-        },
-        {
-          property: 'og:description',
-          content: 'Technical Skills | SC Kim',
-        },
-        {
-          name: 'keywords',
-          content: 'SC Kim, Portfolio, VueJs, Timeline, Mobile, Web Developer, Skills, Android, iOS, Javascript, PHP',
-        },
-      ],
-    },
+    redirect: '/en/skills',
+    // component: SkillsPage,
   },
   {
     path: '/interests',
     name: 'Interests',
-    component: InterestsPage,
-    meta: {
-      title: 'Interest / SC Kim',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Interest | SC Kim',
-        },
-        {
-          property: 'og:description',
-          content: 'Interest | SC Kim',
-        },
-        {
-          name: 'keywords',
-          content: 'SC Kim, Portfolio, VueJs, Interest, Mobile, Web Developer',
-        },
-      ],
-    },
+    redirect: '/en/interests',
+    // component: InterestsPage,
   },
   {
     path: '/awards',
     name: 'awards',
-    component: AwardPage,
+    redirect: '/en/awards',
+    // component: AwardPage,
   },
   {
     path: '/success',
@@ -114,114 +93,64 @@ const routes = [
   {
     path: '/contact',
     name: 'Contact',
+    // redirect: '/en/contact',
     component: ContactPage,
-    meta: {
-      title: 'Contact / SC Kim',
-      metaTags: [
-        {
-          name: 'description',
-          content: "I won't bite, give me a ping!",
-        },
-        {
-          property: 'og:description',
-          content: "I won't bite, give me a ping!",
-        },
-        {
-          name: 'keywords',
-          content: 'SC Kim, Portfolio, VueJs, Contact Me, Mobile, Web Developer',
-        },
-      ],
-    },
   },
   {
     path: '/keynotes',
     name: 'Slides / Keynotes',
-    component: SlidePage,
-    meta: {
-      title: 'Slides & Keynotes / SC Kim',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Previous presented keynotes by SC Kim',
-        },
-        {
-          property: 'og:description',
-          content: 'Previous presented keynotes by SC Kim',
-        },
-        {
-          name: 'keywords',
-          content: 'SC Kim, Portfolio, VueJs, Keynotes, Slides, Mobile, Web Developer, Slides',
-        },
-      ],
-    },
+    redirect: '/en/keynotes',
+    // component: SlidePage,
   },
   {
-    path: '/sc-movies',
-    name: 'SC Movies',
-    component: MoviesPage,
-    meta: {
-      title: 'Movies / SC Kim',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Tech Movies List by SC Kim with TMDB API',
-        },
-        {
-          property: 'og:description',
-          content: 'Tech Movies List by SC Kim with TMDB API',
-        },
-        {
-          name: 'keywords',
-          content: 'SC Kim, Portfolio, VueJs, TMDB, Keynotes, Slides, Mobile, Web Developer, Movies',
-        },
-      ],
-    },
+    path: '/404',
+    name: 'Error',
+    component: Error404Component,
   },
+  {
+    path: '*',
+    redirect: '/404',
+  },
+  // {
+  //   path: '/sc-movies',
+  //   name: 'SC Movies',
+  //   component: MoviesPage,
+  //   meta: {
+  //     title: 'Movies / SC Kim',
+  //     metaTags: [
+  //       {
+  //         name: 'description',
+  //         content: 'Tech Movies List by SC Kim with TMDB API',
+  //       },
+  //       {
+  //         property: 'og:description',
+  //         content: 'Tech Movies List by SC Kim with TMDB API',
+  //       },
+  //       {
+  //         name: 'keywords',
+  //         content: 'SC Kim, Portfolio, VueJs, TMDB, Keynotes, Slides, Mobile, Web Developer, Movies',
+  //       },
+  //     ],
+  //   },
+  // },
 ];
-
+// const locale = window.location.pathname.replace(/^\/([^/]+).*/i, '$1');
 const router = new VueRouter({
   mode: 'history',
-  base: '/',
+  // base: (locale.trim().length && locale !== '/') ? `/${locale}` : undefined,
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    }
+    return { x: 0, y: 0 };
+  },
 });
 
 // eslint-disable-next-line consistent-return
 router.beforeEach((to, from, next) => {
-  // This goes through the matched routes from last to first, finding the closest route with a title.
-  // eg. if we have /some/deep/nested/route and /some, /deep, and /nested have titles, nested's will be chosen.
-  const nearestWithTitle = to.matched.slice().reverse().find((r) => r.meta && r.meta.title);
-
-  // Find the nearest route element with meta tags.
-  const nearestWithMeta = to.matched.slice().reverse().find((r) => r.meta && r.meta.metaTags);
-  // eslint-disable-next-line no-unused-vars
-  const previousNearestWithMeta = from.matched.slice().reverse().find((r) => r.meta && r.meta.metaTags);
-
-
-  // If a route with a title was found, set the document (page) title to that value.
-  if (nearestWithTitle) document.title = nearestWithTitle.meta.title;
-
-  // Remove any stale meta tags from the document using the key attribute we set below.
-  Array.from(document.querySelectorAll('[data-vue-router-controlled]')).map((el) => el.parentNode.removeChild(el));
-
-  // Skip rendering meta tags if there are none.
-  if (!nearestWithMeta) return next();
-
-  // Turn the meta tag definitions into actual elements in the head.
-  nearestWithMeta.meta.metaTags.map((tagDef) => {
-    const tag = document.createElement('meta');
-
-    Object.keys(tagDef).forEach((key) => {
-      tag.setAttribute(key, tagDef[key]);
-    });
-
-    // We use this to track which meta tags we create, so we don't interfere with other ones.
-    tag.setAttribute('data-vue-router-controlled', '');
-
-    return tag;
-  })
-  // Add the meta tags to the document head.
-    .forEach((tag) => document.head.appendChild(tag));
-
+  const { lang } = to.params;
+  document.querySelector('html').setAttribute('lang', lang);
   next();
 });
 

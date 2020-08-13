@@ -11,18 +11,16 @@
             class="d-block d-sm-none"
           />
           <h1 class="mb-8">
-            Hello from
-            <span class="text-primary">SC Kim</span>
+            <!-- Hello from -->
+             {{ $t("about.hello_txt") }}
+            <span class="text-primary">{{ $t("about.author_name_txt")}}</span>
           </h1>
           <div class="subheading mb-5">
-            Malaysia, Kuala Lumpur·
+            {{ $t("about.author_origin") }}
             <a href="mailto:saychunkim@gmail.com">saychunkim@gmail.com</a>
           </div>
           <p class="lead mb-5">
-            'Bit' Sense of Design along Programming,
-            Full Stack from Front End Development,
-            Learning necessary ingredients.
-            Love Learning New Technologies esp from Open Source Communities
+             {{ $t("about.author_biography") }}
           </p>
           <div class="social-icons mb-4">
             <a
@@ -63,37 +61,38 @@
         </b-col>
 
         <b-col cols="12">
-          <h2 class="mt-8 mb-2">My Projects</h2>
-          <p class="mb-4">These're where my efforts poured into</p>
+          <h2 class="mt-8 mb-2"> {{ $t("about.projects_title") }}</h2>
+          <p class="mb-4"> {{ $t("about.projects_desc") }}</p>
           <carousel-3d :disable3d="true" :space="370" :height="251" :controls-visible="true">
             <slide :index="0">
               <img src="/img/works/mhd_estore.jpg" alt="MyHealthDriver Estore"/>
               <p><a href="https://myhealthdriver.com/estore" target="_blank" rel="noopener noreferrer">
-              MyHealthDriver EStore (Opencart)</a></p>
+              <i class="fa fa-external-link-alt mr-1"></i>MHD EStore ({{$t('about.framework_01.name')}})</a></p>
               </slide>
               <slide :index="1">
               <img src="/img/works/coldstorage.jpg" alt="Cold Storage"/>
-              <p><a href="https://coldstorage.com.my/" target="_blank" rel="noopener noreferrer">
-              Cold Storage (Laravel)</a></p>
+              <p><a href="http://coldstorage.com.my/" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-external-link-alt mr-1"></i>Cold Storage ({{$t('about.framework_02.name')}})</a></p>
               </slide>
             <slide :index="2">
               <img src="https://saychunkim.github.io/legacy_v1/images/pconnex.jpg" alt="PConnex"/>
-              <p>PConnex (Firebase)</p>
+              <p>PConnex ({{$t('about.framework_03.name')}})</p>
               </slide>
             <slide :index="3">
               <img src="https://saychunkim.github.io/legacy_v1/images/partayfinder.jpg" alt="Partay Finder"/>
-              <p>PartayFinder (Firebase)</p>
+              <p>PartayFinder ({{$t('about.framework_03.name')}})</p>
             </slide>
             <slide :index="4">
               <img src="https://saychunkim.github.io/legacy_v1/images/myxlab.jpg" alt="MyxLab Android AR"/>
               <p><a href="https://play.google.com/store/apps/details?id=my.myxlab.wristbandar"
               target="_blank" rel="noopener noreferrer">
-              MyXLab AR (Android)</a></p>
+              <i class="fa fa-external-link-alt mr-1"></i>MyXLab AR ({{$t('about.framework_04.name')}})</a></p>
             </slide>
             <slide :index="5">
               <img src="/img/works/ioxKL2016.jpg" alt="IOX KL 2016 Asset Designs"/>
               <p>    <a href="https://ioxkl2016.firebaseapp.com/" target="_blank" rel="noopener noreferrer">
-              Google I/O Extended KL (Asset Designs)</a></p>
+              <i class="fa fa-external-link-alt mr-1"></i>Google IOX KL ({{$t('about.framework_05.name')}})
+              </a></p>
             </slide>
           </carousel-3d>
         </b-col>
@@ -106,7 +105,22 @@
 
 <script>
 export default {
-  name: 'about',
+  name: 'AboutPage',
+  metaInfo() {
+    return {
+      title: this.$t('about.meta_title'),
+      meta: [{
+        vmid: 'description',
+        name: 'description',
+        content: this.$t('about.meta_desc'),
+      },
+      {
+        vmid: 'keywords',
+        name: 'keywords',
+        content: this.$t('about.meta_keywords'),
+      }],
+    };
+  },
 };
 </script>
 <style scoped>

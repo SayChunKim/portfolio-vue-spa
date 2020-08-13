@@ -2,8 +2,8 @@
 <div class="container-fluid p-0 justify-content-center d-flex">
   <section class="resume-section p-3 p-lg-5 d-flex align-items-center text-center" id="skills">
     <div class="w-100">
-      <h2 class="mb-5">Skills</h2>
-      <div class="subheading mb-3">Front-End</div>
+      <h2 class="mb-5">{{$t("skills.skills_title")}}</h2>
+      <div class="subheading mb-3">{{$t("skills.front_end_title")}}</div>
       <ul class="list-inline dev-icons">
         <li class="list-inline-item">
           <i class="fab fa-html5"></i>
@@ -38,7 +38,7 @@
         HTML5, CSS3, JS, VueJS, Angular, React, SASS, LESS, Grunt
       </code>
       </blockquote>
-      <div class="subheading mb-3 mt-4">Back-End</div>
+      <div class="subheading mb-3 mt-4">{{$t("skills.back_end_title")}}</div>
       <ul class="list-inline dev-icons">
         <li class="list-inline-item">
           <i class="fab fa-npm"></i>
@@ -66,7 +66,7 @@
         NPM/NodeJS, Laravel, PHP (LAMP), Firebase
       </code>
       </blockquote>
-      <div class="subheading mb-3 mt-4">Frameworks</div>
+      <div class="subheading mb-3 mt-4">{{$t("skills.framework_title")}}</div>
       <ul class="list-inline dev-icons">
         <li class="list-inline-item">
           <i class="fab fa-wordpress"></i>
@@ -89,27 +89,27 @@
         Wordpress, Opencart, GravCMS, Android, iOS (Native or Cross Platforms)
       </code>
       </blockquote>
-      <div class="subheading mb-3 mt-4">Workflow</div>
+      <div class="subheading mb-3 mt-4">{{$t('skills.workflow.title')}}</div>
       <ul class="fa-ul mb-0">
         <li>
           <i class="fa-li fa fa-check"></i>
-          Mobile-First, Responsive Design
+          {{$t('skills.workflow.point_1')}}
         </li>
         <li>
           <i class="fa-li fa fa-check"></i>
-          Cross Browser Testing &amp; Debugging
+          {{$t('skills.workflow.point_2')}}
         </li>
         <li>
           <i class="fa-li fa fa-check"></i>
-          Cross Functional Teams
+          {{$t('skills.workflow.point_3')}}
         </li>
         <li>
           <i class="fa-li fa fa-check"></i>
-          Agile Development &amp; Scrum
+          {{$t('skills.workflow.point_4')}}
         </li>
         <li>
           <i class="fa-li fa fa-check"></i>
-          Performance Matters
+          {{$t('skills.workflow.point_5')}}
         </li>
       </ul>
     </div>
@@ -143,6 +143,16 @@ code{
 <script>
 export default {
   name: 'skills',
+  metaInfo() {
+    return {
+      title: this.$t('skills.meta_title'),
+      meta: [{
+        vmid: 'description',
+        name: 'description',
+        content: this.$t('skills.meta_desc'),
+      }],
+    };
+  },
 };
 </script>
 

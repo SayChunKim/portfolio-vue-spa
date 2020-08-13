@@ -1,0 +1,109 @@
+{
+  "about": {
+    "meta_title": "Welcome / SC Kim",
+    "meta_desc": "Welcome to SC Kim Portfolio",
+    "meta_keywords": "SC Kim, Portfolio, VueJS, Mobile, Web Developer, Freelancer, Kuala Lumpur, Malaysia",
+    "hello_txt": "Hello From",
+    "author_name_txt": "SC Kim 🙋‍♂️",
+    "author_origin": "Kuala Lumpur, Malaysia",
+    "author_biography": " 'Bit' Sense of Design along Programming,Full Stack from Front End Development, Learning necessary ingredients. Love Learning New Technologies esp from Open Source Communities",
+    "projects_title": "My Projects",
+    "projects_desc": "These're where my efforts poured into",
+    "framework_01": {
+      "name": "Opencart"
+    },
+    "framework_02": {
+      "name": "Laravel"
+    },
+    "framework_03": {
+      "name": "Firebase"
+    },
+    "framework_04": {
+      "name": "Android"
+    },
+    "framework_05": {
+      "name": "Asset Design"
+    }
+  },
+  "menu": {
+    "menu_about_title": "About",
+    "menu_experience_title": "Experience",
+    "menu_skills_title": "Skills",
+    "menu_interests_title": "Interests",
+    "menu_awards_title": "Awards",
+    "menu_keynotes_title": "Keynotes",
+    "menu_contact_title": "Contact",
+    "menu_drawer_title": "Menu",
+    "btn_home_title": "Home (English)"
+  },
+  "timeline": {
+    "meta_title": "IT Timeline / SC Kim",
+    "meta_desc": "SC Kim's Experience in IT Timeline",
+    "timeline_title": "Experience Timeline",
+    "timeline_description": "Going Beyond Usual Resume Style",
+    "title_position_00": "Intern",
+    "title_job_description_00": "Mobile Development Team. Involved in SunwayPals Loyalty Programme (Android & iOS)",
+    "title_position_01": "Recognized Contributor",
+    "title_job_description_01": "Explore, help communities in Android Custom Development, such as ROM, frameworks and OS libraries",
+    "title_position_02": "Google Student Ambassador",
+    "title_job_description_02": "An interviewed role that acts as liaison between Universities and Google. Learnt skills of event organizing and technical along the period.",
+    "title_position_03": "Community Manager",
+    "title_job_description_03": "Event Organizer, Asset Designer. And Technical Speakers for Firebase and PWA.",
+    "title_position_04": "Freelance Developer",
+    "title_job_description_04": "Travelling around, hired for development projects, self-enhancement hacking journey.",
+    "title_position_05": "Tech Lead",
+    "title_job_description_05": "Cofounder for Digital Solutions and provide optimal efficiency according client's needs. Have a Nice collaboration is our ideal concept to get things done.",
+    "title_company_04": "Multiple Companies",
+    "current": "Current",
+    "end_of_timeline_txt": "And Here we are !"
+  },
+  "skills": {
+    "meta_title": "Skills / SC Kim",
+    "meta_desc": "SC Kim's Technical Skills",
+    "skills_title": "Skills",
+    "front_end_title": "Front-End",
+    "back_end_title": "Back-End",
+    "framework_title": "Framework",
+    "workflow": {
+      "title": "Workflow",
+      "point_1": "Mobile-First, Responsive Design",
+      "point_2": "Cross Browser Testing & Debugging",
+      "point_3": "Cross Functional Teams",
+      "point_4": "Agile Development & Scrum",
+      "point_5": "Performance Matters"
+    }
+  },
+  "interests": {
+    "meta_title": "Interests / SC Kim",
+    "meta_desc": "SC Kim's Interests",
+    "title": "Interest",
+    "paragraph_1": "Apart from being a mobile &amp; web developer,I enjoy most of my time being indoors because 365 days of summer. Travel almost every continent in world, and Mingle around developer communities, as part of my enjoyment and self-improvement. I like to support web fast and widely supported, esp. <strong>performance, best practices and accessibility</strong>.",
+    "paragraph_2": "When indoors (like very much), I follow a number of sci-fi and fantasy genre movies and decent anime shows,<strike> I am the one who cooks</strike> I like to learn cooking,while I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.",
+    "music": "Music? <strong>Hardbass</strong> for life."
+  },
+  "awards": {
+    "meta_title": "Awards & Certifications / SC Kim",
+    "meta_desc": "SC Kim's Awards and Certifications",
+    "title": "Awards & Certifications"
+  },
+  "keynotes": {
+    "meta_title": "Keynotes / SC Kim",
+    "meta_desc": "SC Kim's Keynotes & Slides",
+    "title": "Keynotes & Slides",
+    "col_year": "Year",
+    "col_title": "Title",
+    "disclaimer_txt": "Disclaimer: Please be noted some of methods/APIs might be outdated. Please refer latest documentations."
+  },
+  "contact": {
+    "meta_title": "Contact / SC Kim",
+    "meta_desc": "Contact Me Here",
+    "title": "Contact",
+    "label_name": "Name",
+    "label_email": "Email",
+    "label_subject": "Subject",
+    "label_submit": "Send It !",
+    "delivering_txt": "Delivering your email...",
+    "contact_success_title": "Thank you for Contacting !",
+    "contact_success_content": "I got your awesome email, will catch up with you very soon !"
+  }
+}

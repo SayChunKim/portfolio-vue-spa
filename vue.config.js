@@ -53,7 +53,7 @@ module.exports = {
     plugins: [
       new ImageminPlugin({
         disable: process.env.NODE_ENV !== 'production', // Disable during development
-        jpegtran: {
+        jaegtran: {
           quality: '85-90',
         },
       }),
@@ -61,15 +61,16 @@ module.exports = {
         staticDir: path.join(__dirname, 'dist'),
 
         // IMPORTANT HERE
-        routes: ['/',
-          '/timeline',
-          '/interests',
-          '/skills',
-          '/awards',
-          '/keynotes',
+        routes: ['/', '/en', '/zh-CN', '/ja', '/timeline', '/interests', '/skills', '/keynotes', '/awards',
+          '/en/timeline', '/ja/timeline', '/zh-CN/timeline',
+          '/en/interests', '/ja/interests', '/zh-CN/interests',
+          '/en/skills', '/ja/skills', '/zh-CN/skills',
+          '/en/awards', '/ja/awards', '/zh-CN/awards',
+          '/en/keynotes', '/ja/keynotes', '/zh-CN/keynotes',
           '/contact',
           '/success',
-          '/sc-movies'],
+          '/404',
+        ],
 
         // IMPORTANT HERE
         postProcess(renderedRoute) {
@@ -82,14 +83,30 @@ module.exports = {
         },
       }),
       new GenerateSW({
+        skipWaiting: true,
         additionalManifestEntries: [
-          { url: '/timeline/', revision: null },
-          { url: '/interests/', revision: null },
-          { url: '/skills/', revision: null },
-          { url: '/awards/', revision: null },
-          { url: '/keynotes/', revision: null },
-          { url: '/contact/', revision: null },
-          { url: '/sc-movies/', revision: null },
+          { url: '/timeline', revision: null },
+          { url: '/interests', revision: null },
+          { url: '/skills', revision: null },
+          { url: '/awards', revision: null },
+          { url: '/keynotes', revision: null },
+          { url: '/contact', revision: null },
+          { url: '/404', revision: null },
+          { url: '/en/timeline', revision: null },
+          { url: '/en/interests', revision: null },
+          { url: '/en/skills', revision: null },
+          { url: '/en/awards', revision: null },
+          { url: '/en/keynotes', revision: null },
+          { url: '/ja/timeline', revision: null },
+          { url: '/ja/interests', revision: null },
+          { url: '/ja/skills', revision: null },
+          { url: '/ja/awards', revision: null },
+          { url: '/ja/keynotes', revision: null },
+          { url: '/zh-CN/timeline', revision: null },
+          { url: '/zh-CN/interests', revision: null },
+          { url: '/zh-CN/skills', revision: null },
+          { url: '/zh-CN/awards', revision: null },
+          { url: '/zh-CN/keynotes', revision: null },
         ],
       }),
     ],

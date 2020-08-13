@@ -6,11 +6,13 @@
     <transition name="fade" mode="out-in">
     <router-view />
     </transition>
+    <FooterComponent />
   </div>
 </template>
 
 <script>
 import HeaderComponent from '@/components/Header.vue';
+import FooterComponent from '@/components/Footer.vue';
 import '@/assets/vendor/bootstrap.min.css';
 import '@/assets/vendor/bootstrap-vue.min.css';
 import '@/assets/theme/resume.css';
@@ -19,11 +21,17 @@ import '@/assets/fontawesome/all.min.css';
 export default {
   components: {
     HeaderComponent,
+    FooterComponent,
   },
   data() {
     return {
       showUpgradeUI: true,
     };
+  },
+  watch: {
+    locale(val) {
+      this.$i18n.locale = val;
+    },
   },
   created() {
     if (this.$workbox) {
@@ -32,11 +40,18 @@ export default {
       });
     }
   },
-
+  mounted() {
+    this.setDefaultLocale();
+  },
   methods: {
     async accept() {
       this.showUpgradeUI = false;
       await this.$workbox.messageSW({ type: 'SKIP_WAITING' });
+    },
+    setDefaultLocale() {
+      if (this.$route.params.lang !== 'en') {
+        this.$root.$i18n.locale = this.$route.params.lang;
+      }
     },
   },
 };
@@ -58,17 +73,17 @@ export default {
    #snackbar {
   visibility: hidden; /* Hidden by default. Visible on click */
   min-width: 250px; /* Set a default minimum width */
-  margin-left: -125px; /* Divide value of min-width by 2 */
   background-color: #333; /* Black background color */
   color: #fff; /* White text color */
   text-align: center; /* Centered text */
   border-radius: 2px; /* Rounded borders */
   padding: 16px; /* Padding */
   position: fixed; /* Sit on top of the screen */
-  z-index: 1; /* Add a z-index if needed */
+  z-index: 10000; /* Add a z-index if needed */
   left: 50%; /* Center the snackbar */
   top: 30px; /* 30px from the top */
   border-radius: .5rem;
+  transform: translateX(-50%);
 }
 
 /* Show the snackbar when clicking on a button (class added with JavaScript) */

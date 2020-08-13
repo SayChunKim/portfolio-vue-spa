@@ -1,10 +1,10 @@
 <template>
   <div>
     <section id="timeline">
-      <h1>Experience Timeline</h1>
+      <h2 class="text-center">{{$t('timeline.timeline_title')}}</h2>
       <p
         class="leader"
-      >Going Beyond Usual Resume Style</p>
+      >{{$t('timeline.timeline_description')}}</p>
       <div class="demo-card-wrapper">
         <div class="demo-card demo-card--step1">
           <div class="head">
@@ -12,12 +12,11 @@
               <span>01</span>
             </div>
             <h2>
-              <span class="small">Android Recognized Contributor</span> XDA-Developers
+              <span class="small">Android {{$t('timeline.title_position_01')}}</span> XDA-Developers
             </h2>
           </div>
           <div class="body">
-            <p>Explore, help communities in Android Custom Development, such
-                as ROM, frameworks and OS libraries
+            <p>{{$t('timeline.title_job_description_01')}}
             </p>
             <img src="/img/timeline/xda_1.jpg" alt="XDA Recognized Contributor" />
           </div>
@@ -29,11 +28,11 @@
               <span>02</span>
             </div>
             <h2>
-              <span class="small">Intern</span> Fusionex International
+              <span class="small">{{$t('timeline.title_position_00')}}</span> Fusionex International
             </h2>
           </div>
           <div class="body">
-            <p>Mobile Development Team. Involved in SunwayPals Loyalty Programme (Android &amp; iOS)</p>
+            <p>{{$t('timeline.title_job_description_00')}}</p>
             <img src="/img/timeline/fusionex_1.jpg" alt="Fusionex Intern" />
           </div>
         </div>
@@ -44,12 +43,11 @@
               <span>03</span>
             </div>
             <h2>
-              <span class="small">Google Student Ambassador (MY)</span> Google Student Ambassador
+              <span class="small">{{$t('timeline.title_position_02')}}</span> Google Student Ambassador
             </h2>
           </div>
           <div class="body">
-            <p>An interviewed role that acts as liaison between Universities and Google.
-            Learnt skills of event organizing and technical along the period.</p>
+            <p>{{$t('timeline.title_job_description_02')}}</p>
             <img src="/img/timeline/gsa_3.jpg" alt="GSA" />
           </div>
         </div>
@@ -60,11 +58,11 @@
               <span>04</span>
             </div>
             <h2>
-              <span class="small">Co-Organizer</span> Google Developers Group KL
+              <span class="small">{{$t('timeline.title_position_03')}}</span> Google Developers Group KL
             </h2>
           </div>
           <div class="body">
-            <p>Event Organizer, Asset Designer. And Technical Speakers for Firebase and PWA</p>
+            <p>{{$t('timeline.title_job_description_03')}}</p>
                         <img src="/img/timeline/gdg_4.jpg" alt="GDG Kuala Lumpur" />
 
           </div>
@@ -76,11 +74,12 @@
               <span>05</span>
             </div>
             <h2>
-              <span class="small">Web/Mobile Freelance Dev</span> Multiple companies
+              <span class="small">Web/Mobile {{$t('timeline.title_position_04')}}</span>
+              {{$t('timeline.title_company_04')}}
             </h2>
           </div>
           <div class="body">
-            <p>Travelling around, hired for development projects, self-enhancement hacking journey.</p>
+            <p>{{$t('timeline.title_job_description_04')}}</p>
             <img src="/img/timeline/self_4.jpg" alt="Freelance Slacking" />
           </div>
         </div>
@@ -90,23 +89,33 @@
               <span>06</span>
             </div>
             <h2>
-              <span class="small">Tech Lead (Current)</span> Havenice Sdn. Bhd
+              <span class="small">{{$t('timeline.title_position_05')}} ({{$t('timeline.current')}})
+                </span> Havenice Sdn. Bhd
             </h2>
           </div>
           <div class="body">
-            <p>Cofounder for Digital Solutions and provide optimal efficiency according client's needs.
-                Have a Nice collaboration is our ideal concept to get things done.</p>
+            <p>{{$t('timeline.title_job_description_05')}}</p>
             <img src="/img/timeline/havenice_6.jpg" alt="Havenice" />
           </div>
         </div>
       </div>
-       <h5 class="leader">And here we are !</h5>
+       <h5 class="leader">{{$t('timeline.end_of_timeline_txt')}}</h5>
     </section>
   </div>
 </template>
 <script>
 export default {
   name: 'timeline',
+  metaInfo() {
+    return {
+      title: this.$t('timeline.meta_title'),
+      meta: [{
+        vmid: 'description',
+        name: 'description',
+        content: this.$t('timeline.meta_desc'),
+      }],
+    };
+  },
 };
 </script>
 <style scoped>

@@ -1,0 +1,109 @@
+{
+    "about": {
+        "meta_title": "ようこそ！ / SC Kim",
+        "meta_desc": "「SC Kim ポートフォリオ」にようこそ!",
+        "meta_keywords": "SC Kim, Portfolio, VueJS, Mobile, Web Developer, Freelancer, クアラルンプール, マレーシア",
+        "hello_txt": "こんにちは、",
+        "author_name_txt": "キムです🙋‍♂️",
+        "author_origin": "クアラルンプール、マレーシア",
+        "author_biography": "  プログラミングに沿ったデザインの「ビット」感覚、フロントエンド開発からのフルスタック、必要な材料を学ぶ。オープンソースコミュニティからの新しいテクノロジー、特に学習が大好き",
+        "projects_title": "プロジェクト",
+        "projects_desc": "努力が注がれたプロジェクト",
+        "framework_01": {
+            "name": "オパンー・カールト"
+        },
+        "framework_02": {
+            "name": "ララヴェル"
+        },
+        "framework_03": {
+            "name": "ファイア・ベース"
+        },
+        "framework_04": {
+            "name": "アンドロイド"
+        },
+        "framework_05": {
+            "name": "アセット・デザイン"
+        }
+    },
+    "menu": {
+        "menu_about_title": "紹介",
+        "menu_experience_title": "IT職歴",
+        "menu_skills_title": "コーディングスキル",
+        "menu_interests_title": "趣味",
+        "menu_awards_title": "名誉と認証",
+        "menu_keynotes_title": "キーノート",
+        "menu_contact_title": "連絡",
+        "menu_drawer_title": "メニュー",
+        "btn_home_title": "ホーム (日本語)"
+    },
+    "timeline": {
+        "meta_title":"IT職歴 / SC Kim",
+        "meta_desc":"SC KimのIT職歴",
+        "timeline_title": "IT職歴",
+        "timeline_description": "通常の面接スタイルを超えて",
+        "title_position_00": "インターン",
+        "title_position_01": "認められた貢献者 (RC)",
+        "title_position_02": "Google 学生大使",
+        "title_position_03": "コミュニティマネージャー",
+        "title_position_04": "フリーランス開発者",
+        "title_position_05": "テクノリーダー",
+        "title_company_04" : "さまざまな企業",
+        "current": "当座",
+        "title_job_description_00": "モバイル開発チーム。 SunwayPalsロイヤルティプログラムに関与（AndroidおよびiOS）。",
+        "title_job_description_01": "ROM、フレームワーク、OSライブラリなど、Androidカスタム開発のコミュニティを探索して支援する。",
+        "title_job_description_02": "大学とGoogleの間の連絡役を務める面接の役割。 期間に沿ってイベントの組織化と技術のスキルを学びました。",
+        "title_job_description_03": "イベントオーガナイザー、アセットデザイナー。 FirebaseおよびPWAのテクニカルスピーカー。",
+        "title_job_description_04": "旅行、開発プロジェクトのために雇われた、自己強化修道の旅。",
+        "title_job_description_05": "お客様のニーズに基づいて最適な効率を提供するITソリューションの共同創設者。 良好な協力は、作業を完了するための理想的なコンセプトです。",
+        "end_of_timeline_txt" : "そして今ここに ヾ(＾∇＾)"
+    },
+    "skills": {
+        "meta_title":"コーディングスキル / SC Kim",
+        "meta_desc":"SC Kimのコーディングスキル",
+        "skills_title": "コーディングスキル",
+        "front_end_title": "フロント・エンド",
+        "back_end_title": "バック・エンド",
+        "framework_title": "フレームワーク",
+        "workflow": {
+            "title": "ワークフロー",
+            "point_1": "モバイルFIRST対応、リアクティブデザイン",
+            "point_2": "クロスブラウザテストとデバッグOK",
+            "point_3": "チームと柔軟に連携OK",
+            "point_4": "アジャイル開発とスクラムOK",
+            "point_5": "パフォーマンスは最も重要です"
+        }
+    },
+    "interests": {
+        "meta_title": "趣味 / SC Kim",
+        "meta_desc": "SC Kimの趣味",
+        "title": "趣味",
+        "paragraph_1": "モバイルとウェブの開発者であることは別にして、夏の365日なので、ほとんどの時間を屋内で楽しんでいます。私の楽しみと自己改善の一環として、世界のほぼすべての大陸を旅し、開発者コミュニティを巡って交流します。高速で広くサポート<strong>(特に: パフォーマンス、ベストプラクティス、アクセシビリティ)</strong>されているウェブをサポートしたいと思っています。",
+        "paragraph_2": "屋内にいるとき（たくさんのように）は、サイエンスフィクションやファンタジーのジャンルの映画やまともなアニメショーを何度もフォローしています。 私は料理を学ぶのが好きですが、自由時間の多くを費やして、Web開発の世界での最新のテクノロジーの進歩を探求しています。",
+        "music": "好きな音楽ジャンルは<strong>ハードベース</strong>です。"
+    },
+    "awards":{
+        "meta_title":"名誉と認証 / SC Kim",
+        "meta_desc":"SC Kimの名誉と認証",
+        "title": "名誉と認証"
+      },
+      "keynotes":{
+        "meta_title":"キーノート / SC Kim",
+        "meta_desc":"SC Kimのキーノート",
+        "title": "キーノート",
+        "col_year" : "年",
+        "col_title" : "題名",
+        "disclaimer_txt": "免責事項：一部のメソッド/ APIは古くなっている可能性があることに注意してください。 最新のドキュメントを参照してください。"
+      },
+      "contact":{
+        "meta_title": "連絡 / SC Kim",
+        "meta_desc": "SC Kim の連絡方法",
+        "title": "連絡",
+        "label_name": "君の名前",
+        "label_email": "君のメールアドレス",
+        "label_subject": "メッセージ",
+        "label_submit": "届ける",
+        "delivering_txt": "メールを送信しています...",
+        "contact_success_title": "ご連絡ありがとうございます！",
+      "contact_success_content": "素晴らしいメールを受け取りました、すぐに追いつきます！"
+      }
+}

@@ -2,13 +2,14 @@
   <div class="container-fluid p-0 justify-content-center d-flex">
   <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="contact">
     <div class="w-100">
-      <h2 class="mb-5 text-center">Contact</h2>
+      <h2 class="mb-5 text-center">{{$t('contact.title')}}</h2>
       <form role="form" method="POST" @submit.prevent="sendEmail">
+      <!-- <form role="form" method="POST" action="https://formspree.io/saychunkim@gmail.com"> -->
         <b-row>
           <div class="form-group col-sm-6">
-            <label>Your Name</label>
+            <label for="mail_name">{{$t('contact.label_name')}}</label>
             <input
-              type="text"
+              type="text" id="mail_name"
               name="name"
               class="form-control col-12"
               placeholder="Name"
@@ -16,9 +17,9 @@
             />
           </div>
           <div class="form-group col-sm-6">
-            <label>Your Email</label>
+            <label for="mail_email">{{$t('contact.label_email')}}</label>
             <input
-              type="email"
+              type="email" id="mail_email"
               name="_replyto"
               class="form-control col-12"
               placeholder="abc@abc.com"
@@ -29,8 +30,9 @@
         </b-row>
         <b-row>
           <div class="form-group col-sm-12">
-            <label>Message</label>
+            <label for="mail_message">{{$t('contact.label_subject')}}</label>
             <textarea
+            id="mail_message"
               name="message"
               class="form-control col-12"
               rows="5"
@@ -42,7 +44,8 @@
         </b-row>
         <b-row class="justify-content-center">
           <b-col sm="3">
-            <input type="submit" class="btn btn-primary col-12" :disabled="!nameMsg || !emailMsg || !messageMsg"
+            <input type="submit" class="btn btn-primary col-12" :value="this.$t('contact.label_submit')"
+             :disabled="!nameMsg || !emailMsg || !messageMsg"
            />
           </b-col>
         </b-row>
@@ -50,7 +53,7 @@
         <b-row v-if="loadingSpinner">
           <div class="text-center col-12">
                <b-spinner variant="primary" label="Spinning"></b-spinner>
-               <p class="mb-8 text-primary">Delivering your email...</p>
+               <p class="mb-8 text-primary">{{$t('contact.delivering_txt')}}</p>
           </div>
       </b-row>
       </form>
@@ -60,7 +63,7 @@
 </template>
 <style scoped>
 label {
-  color: #968351;
+  color: #85754a;
     font-weight: bold;
 }
 input[type="submit"]{
@@ -72,6 +75,16 @@ input[type="submit"]{
 import axios from 'axios';
 
 export default {
+  metaInfo() {
+    return {
+      title: this.$t('contact.meta_title'),
+      meta: [{
+        vmid: 'description',
+        name: 'description',
+        content: this.$t('contact.meta_desc'),
+      }],
+    };
+  },
   data() {
     return {
       nameMsg: '',

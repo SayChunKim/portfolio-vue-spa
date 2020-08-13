@@ -1,0 +1,109 @@
+{
+   "about": {
+      "meta_title": "欢迎！ / SC Kim",
+      "meta_desc": "欢迎来到 SC Kim Portfolio",
+      "meta_keywords": "SC Kim, Portfolio, Vue, Mobile, Web 程序员, 自由程序员, 吉隆坡, 马来西亚",
+      "hello_txt": "你好、",
+      "author_name_txt": "我叫KIM🙋‍♂️",
+      "author_origin": "来自吉隆坡、马来西亚",
+      "author_biography": " ‘一点’设计意识,从前端直到全端开发，学习必要的要素。 热衷于学习新技术，尤其是从开源社区学习新技术。",
+      "projects_title": "我的工作项目",
+      "projects_desc": "精力投入的项目",
+      "framework_01": {
+         "name": "Opencart"
+      },
+      "framework_02": {
+         "name": "Laravel"
+      },
+      "framework_03": {
+         "name": "Firebase"
+      },
+      "framework_04": {
+         "name": "Android"
+      },
+      "framework_05": {
+         "name": "资源设计"
+      }
+   },
+   "menu": {
+      "menu_about_title": "介绍",
+      "menu_experience_title": "工作经验",
+      "menu_skills_title": "软件工程技巧",
+      "menu_interests_title": "兴趣",
+      "menu_awards_title": "奖项",
+      "menu_keynotes_title": "演讲料谱",
+      "menu_contact_title": "联系",
+      "menu_drawer_title": "菜单",
+      "btn_home_title": "主页 (简体中文)"
+   },
+   "timeline": {
+      "meta_title":"IT工作经验 / SC Kim",
+      "meta_desc":"SC KimのIT工作经验",
+      "timeline_title": "工作经验",
+      "timeline_description": "超出常规工作简历",
+      "title_position_00": "实习生",
+      "title_position_01": "公认贡献者",
+      "title_position_02": "谷歌学生大使",
+      "title_position_03": "社区经纪",
+      "title_position_04": "自由程序员",
+      "title_position_05": "技术主管",
+      "title_company_04": "多家公司",
+      "current": "当前",
+      "title_job_description_00": "MOBILE开发团队。 参与SunwayPals忠诚计划（Android和iOS）。",
+      "title_job_description_01": "探索和帮助Android Custom Development中的社区，例如ROM，框架和OS库。",
+      "title_job_description_02": "充当大学与谷歌之间的联络人。 在此期间学习了事件组织和技术方面的技能。",
+      "title_job_description_03": "活动组织者，资产设计师。 以及Firebase和Progressive Web Apps的技术发言人。",
+      "title_job_description_04": "到处旅行，为开发项目租用，自我增强技术之旅。",
+      "title_job_description_05": "解决IT方案联合创始人，根据客户需求提供最佳效率。 进行良好的合作是我们完成工作的理想概念。",
+      "end_of_timeline_txt": "现在到这里"
+   },
+   "skills": {
+      "meta_title": "软件工程技巧 / SC Kim",
+      "meta_desc": "SC Kim的软件工程技巧",
+      "skills_title": "软件工程技巧",
+      "front_end_title": " 前端 / UI",
+      "back_end_title": "后端 / Back-End",
+      "framework_title": "框架 / Frameworks",
+      "workflow": {
+         "title": "工作流程",
+         "point_1": "Mobile First 方向, 響應式網頁設計",
+         "point_2": "跨浏览器测试和去除错误OK",
+         "point_3": "跨职能团队通讯OK",
+         "point_4": "敏锐開発和SCRUM OK",
+         "point_5": "注意产品性能"
+      }
+   },
+   "interests": {
+      "meta_title": "兴趣 / SC Kim",
+      "meta_desc": "SC Kim的兴趣",
+      "title": "兴趣",
+      "paragraph_1": "除了成为Mobile和Web开发者外，我大部分时间都在室内度过，因为夏天是365天。 作为我的享受和自我修行的一部分，环游世界上几乎每个大陆，并与开发者社区相处。 我喜欢快速而广泛地支持Web，尤其是： <strong>性能，最佳开发惯例和可访问性</strong>。",
+      "paragraph_2": "在室内（大多数）时，我会看一些科幻和奇幻类电影和体面的动漫节目，喜欢学习烹饪，而则花费大量的空闲时间探索最新的 前端Web开发领域的技术进步。",
+      "music": "喜欢的音乐类型是<strong>Hardbass</strong>。"
+   },
+   "awards":{
+      "meta_title":"奖项与证书 / SC Kim",
+      "meta_desc":"SC Kim 奖项与证书",
+      "title": "奖项与证书"
+    },
+    "keynotes":{
+      "meta_title":"演讲料谱 / SC Kim",
+      "meta_desc":"SC Kim's 演讲料谱",
+      "title": "演讲料谱",
+      "col_year" : "年份",
+      "col_title" : "标题",
+      "disclaimer_txt": "免责声明：请注意，某些方法/ API可能已过时。 请参考最新文档。"
+    },
+    "contact":{
+      "meta_title": "联系 / SC Kim",
+      "meta_desc": "在这里与我联系吧！",
+      "title": "联系",
+      "label_name": "你的名称",
+      "label_email": "你的电子邮件",
+      "label_subject": "标题内容",
+      "label_submit": "提交 !",
+      "delivering_txt": "正在发送您的电子邮件...",
+      "contact_success_title": "感谢您的联系！",
+      "contact_success_content": "我收到了您的来信，会将尽快与您联系！"
+    }
+}

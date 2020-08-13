@@ -11,79 +11,85 @@
         <!-- <a href="/"> -->
           <img id="logo-bg" class="img-fluid mx-auto mb-2"
            src="../assets/images/sc_logov2_140x140.png" width="140" height="140" alt="Logo" />
-        <!-- </a> -->
       </span>
     </div>
-    <!-- <button
-      class="navbar-toggler"
-      type="button"
-      @click="toggleNavbar()"
-    >
-    <span class="navbar-toggler-icon"></span>
-    </button> -->
-    <!-- <b-navbar-toggle target="nav-collapse"></b-navbar-toggle> -->
       <div>
-    <b-button v-b-toggle.sidebar-backdrop class="d-lg-none" id="menuBtn" aria-label="menu-button-mobile"><i class="fa fa-bars"></i></b-button>
+    <b-button v-b-toggle.sidebar-backdrop class="d-lg-none" id="menuBtn" aria-label="menu-button-mobile"
+    v-if="$route.path !== '/404/' && $route.path !== '/404'"><i class="fa fa-bars"></i></b-button>
     <b-sidebar
       id="sidebar-backdrop"
-      title="Menu"
+      :title="$t('menu.menu_drawer_title')"
       backdrop
       shadow=""
+      v-if="$route.path !== '/404/' && $route.path !== '/404'"
     >
       <div class="px-0 py-2">
         <ul class="list-unstyled">
         <li class="nav-item">
-          <router-link to="/" class="nav-link js-scroll-trigger">About</router-link>
+          <router-link :to="'/'+routeParam" class="nav-link js-scroll-trigger">{{$t('menu.menu_about_title')}}</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/timeline" class="nav-link js-scroll-trigger">Experience</router-link>
+          <router-link :to="'/'+routeParam+'/timeline'" class="nav-link js-scroll-trigger">{{$t('menu.menu_experience_title')}}</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/skills" class="nav-link js-scroll-trigger">Skills</router-link>
+          <router-link :to="'/'+routeParam+'/skills'" class="nav-link js-scroll-trigger">{{$t('menu.menu_skills_title')}}</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/interests" class="nav-link js-scroll-trigger">Interests</router-link>
+          <router-link :to="'/'+routeParam+'/interests'" class="nav-link js-scroll-trigger">{{$t('menu.menu_interests_title')}}</router-link>
+          <ul class="list-unstyled pl-3" v-if="this.$route.path == '/sc-movies' || this.$route.path == '/sc-movies/' ">
+            <router-link to="/sc-movies" class="nav-link js-scroll-trigger">Movies</router-link>
+          </ul>
         </li>
         <li class="nav-item">
-          <router-link to="/awards" class="nav-link js-scroll-trigger">Awards</router-link>
+          <router-link :to="'/'+routeParam+'/awards'" class="nav-link js-scroll-trigger">{{$t('menu.menu_awards_title')}}</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/keynotes" class="nav-link js-scroll-trigger">Keynotes</router-link>
+          <router-link :to="'/'+routeParam+'/keynotes'" class="nav-link js-scroll-trigger">{{$t('menu.menu_keynotes_title')}}</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/contact" class="nav-link js-scroll-trigger">Contact</router-link>
+          <router-link to="/contact" class="nav-link js-scroll-trigger">{{$t('menu.menu_contact_title')}}</router-link>
         </li>
         </ul>
+        <b-button-group class="pl-3">
+      <a v-for="(lang, i) in langs" :key="`Lang${i}`" :href="'/'+lang.code+'/'" class="btn btn-secondary mr-1">
+      {{lang.name}}</a>
+    </b-button-group>
         </div>
     </b-sidebar>
   </div>
     <!-- <div class=" navbar-collapse" id="navbarSupportedContent"> -->
       <b-collapse id="nav-collapse" is-nav>
       <!-- <ul id="mainMenu" class="navbar-nav" v-bind:class="{'menu-active': show,'menu': !show}"> -->
-        <b-navbar-nav>
+        <b-navbar-nav v-if="$route.path !== '/404/' && $route.path !== '/404'">
         <li class="nav-item">
-          <router-link to="/" class="nav-link js-scroll-trigger">About</router-link>
+          <router-link :to="'/'+routeParam" class="nav-link js-scroll-trigger">{{$t('menu.menu_about_title')}}</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/timeline" class="nav-link js-scroll-trigger">Experience</router-link>
+          <router-link :to="'/'+routeParam+'/timeline'" class="nav-link js-scroll-trigger">{{$t('menu.menu_experience_title')}}</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/skills" class="nav-link js-scroll-trigger">Skills</router-link>
+          <router-link :to="'/'+routeParam+'/skills'" class="nav-link js-scroll-trigger">{{$t('menu.menu_skills_title')}}</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/interests" class="nav-link js-scroll-trigger">Interests</router-link>
-          <ul v-if="this.$route.path == '/sc-movies' || this.$route.path == '/sc-movies/' ">
+          <router-link :to="'/'+routeParam+'/interests'" class="nav-link js-scroll-trigger">{{$t('menu.menu_interests_title')}}</router-link>
+          <ul class="list-unstyled pl-3" v-if="this.$route.path == '/sc-movies' || this.$route.path == '/sc-movies/' ">
             <router-link to="/sc-movies" class="nav-link js-scroll-trigger">Movies</router-link>
           </ul>
         </li>
         <li class="nav-item">
-          <router-link to="/awards" class="nav-link js-scroll-trigger">Awards</router-link>
+          <router-link :to="'/'+routeParam+'/awards'" class="nav-link js-scroll-trigger">{{$t('menu.menu_awards_title')}}</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/keynotes" class="nav-link js-scroll-trigger">Keynotes</router-link>
+          <router-link :to="'/'+routeParam+'/keynotes'" class="nav-link js-scroll-trigger">{{$t('menu.menu_keynotes_title')}}</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/contact" class="nav-link js-scroll-trigger">Contact</router-link>
+          <router-link to="/contact" class="nav-link js-scroll-trigger">{{$t('menu.menu_contact_title')}}</router-link>
+        </li>
+        <li class="nav-item">
+     <b-button-group class="mt-1" vertical>
+      <a v-for="(lang, i) in langs" :key="`Lang${i}`" :href="'/'+lang.code+'/'" class="btn btn-secondary mt-2">
+      {{lang.name}}</a>
+    </b-button-group>
         </li>
       <!-- </ul> -->
     <!-- </div> -->
@@ -101,8 +107,12 @@ export default {
   data() {
     return {
       show: false,
+      routeParam: this.$route.params.lang,
       scrollPosition: null,
+      langs: [{ name: 'ENG', code: 'en' }, { name: '日本語', code: 'ja' }, { name: '简体中文', code: 'zh-CN' }],
     };
+  },
+  created() {
   },
   mounted() {
     window.addEventListener('scroll', this.updateScroll);
@@ -160,5 +170,23 @@ height: 0;
   background: #0d1679;
     border: none;
     font-size: 1.5rem;
+}
+.mt-1.btn-group-vertical .btn-secondary {
+    background: transparent;
+    border-color: #fff;
+}
+.mt-1.btn-group-vertical .btn-secondary:hover {
+    background:white;
+    color:#0d1679;
+}
+
+.pl-3.btn-group .btn-secondary {
+    background: #0d1679;
+    color:white;
+}
+.pl-3.btn-group .btn-secondary:hover {
+    background:white;
+    color:#0d1679;
+    border-color: #0d1679;
 }
 </style>
